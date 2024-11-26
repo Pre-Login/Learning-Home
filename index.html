@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="RocketCake">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="index_html.css?h=f89dedeb">
+	<link rel="stylesheet" type="text/css" href="index_html.css?h=80bdeacc">
 </head>
 <body>
 <div class="textstyle1">
@@ -93,23 +93,25 @@ function closesidebarMenu()
 </div></div><span class="textstyle8"><br/><br/></span></div>
 </div><div id="container_6f123cbb"><div id="container_6f123cbb_padding" ><div class="textstyle1"><span class="textstyle8"><br/></span><div id="container_2ccd4f1f"><div id="container_2ccd4f1f_padding" ><div class="textstyle1"><span class="textstyle9">Training Login Search</span><span class="textstyle10">:</span></div>
 </div></div><div id="html_2aae4aae"><script>
-  // Check if the page is embedded
-  function checkIfEmbedded() {
+  // Check if the page is embedded in Hyperdrive
+  function checkIfEmbeddedInHyperdrive() {
     const table = document.getElementById("myTable");
     const input = document.getElementById("myInput");
-    if (window.self !== window.top) {
-      // Page is embedded; show the table
+
+    // Example: Check user agent for "Hyperdrive" keyword or any known property unique to Hyperdrive
+    if (navigator.userAgent.includes("Hyperdrive") && window.self !== window.top) {
+      // Page is embedded in Hyperdrive; show the table
       table.style.display = "table";
       input.style.display = "block";
     } else {
-      // Page is not embedded; hide the table
+      // Page is not embedded in Hyperdrive; hide the table
       table.style.display = "none";
       input.style.display = "none";
     }
   }
 
   // Run the check on page load
-  window.onload = checkIfEmbedded;
+  window.onload = checkIfEmbeddedInHyperdrive;
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
